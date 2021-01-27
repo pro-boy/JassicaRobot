@@ -137,7 +137,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't demote myself! Get an admin to do it for me.")
+            "Damn! I can't demote myself! Get an admin to do it for me.")
         return log_message
 
     try:
