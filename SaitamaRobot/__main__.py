@@ -22,25 +22,28 @@ from telegram.utils.helpers import escape_markdown
 
 PM_START_TEXT = """
 
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-You can find my list of available commands with /help.
+Hɪ {}, Mʏ Nᴀᴍᴇ Is {}! 
+I ᴀᴍ ᴀɴ Cʏʙᴏʀɢ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ.
+Bᴜɪʟᴅ Bʏ Wᴇᴇʙs Fᴏʀ Wᴇᴇʙs, I Sᴘᴇᴄɪᴀʟɪᴢᴇ Iɴ Mᴀɴᴀɢɪɴɢ Aɴɪᴍᴇ Aɴᴅ Sɪᴍɪʟᴀʀ Tʜᴇᴍᴇᴅ Gʀᴏᴜᴘs.
 
-i'm a group manager bot. Maintained by @GarimaQueen
+================================
+Yᴏᴜ Cᴀɴ Fɪɴᴅ Mʏ Lɪsᴛ Oғ Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅs Wɪᴛʜ /help.
+Jᴏɪɴ Fᴏʀ Cʏʙᴏʀɢ Uᴘᴅᴀᴛᴇs Bʏ Cʟɪᴄᴋɪɴɢ Hᴇʀᴇ.
 
+================================
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
 
 *Main* commands available:
- • /start: start the bot
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information about how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+  ◉ /start: start the bot
+  ◉ /help: PM's you this message.
+  ◉ /help <module name>: PM's you info about that module.
+  ◉ /donate: information about how to donate!
+  ◉ /settings:
+    in PM: will send you your settings for all supported modules.
+    in a group: will redirect you to pm, with all that chat's settings.[◉‿◉](https://telegra.ph/file/9b77a40a22c52cbe815e6.jpg) 
 
 
 {}
@@ -49,7 +52,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://images.alphacoders.com/679/679719.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/2a2aa82c0005d729305ed.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
@@ -156,8 +159,7 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                  [InlineKeyboardButton(text="👸 Add Jassica to your group", url="t.me/{}?startgroup=true".format(context.bot.username))],
-                  [InlineKeyboardButton(text="Source Code", url="https://github.com/QueenArzoo/ElisaRobot"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")]]))
+                  [InlineKeyboardButton(text="👸 Add Royoko to your group", url="t.me/{}?startgroup=true".format(context.bot.username))]                  
     else:
         update.effective_message.reply_text("Yo, whadup?")
 
